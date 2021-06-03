@@ -240,7 +240,7 @@
                 "height": "y*0.8-80",
                 "width": "x*0.8"
             },
-            "title": "个人博客",
+            "title": "ZZのBlog",
             "url": "http://Inactionzz.github.io",
             "customTile": "",
             "urlRandomToken": true
@@ -662,7 +662,7 @@
                 "y": "y*0.05"
             },
             "version": "1.0.0",
-            "poweredBy": "luckyzmj",
+            "poweredBy": "ZZ",
             "resizable": true,
             "single": false,
             "size": {
@@ -761,7 +761,7 @@
                 "y": "y*0.05"
             },
             "version": "1.0.0",
-            "poweredBy": "luckyzmj",
+            "poweredBy": "ZZ",
             "resizable": true,
             "single": false,
             "size": {
@@ -827,7 +827,7 @@
                 "y": "y*0.05"
             },
             "version": "1.0.0",
-            "poweredBy": "luckyzmj",
+            "poweredBy": "ZZ",
             "resizable": true,
             "single": false,
             "size": {
@@ -935,7 +935,7 @@
         },
         {
             "app": "yl-app-home",
-            "title": "个人博客",
+            "title": "ZZのBlog",
             "params": {},
             "hash": ""
         },
@@ -1013,7 +1013,7 @@
                     "w": 6,
                     "h": 4,
                     "app": "yl-app-home",
-                    "title": "个人博客",
+                    "title": "ZZのBlog",
                     "i": "147",
                     "params": {},
                     "hash": ""
