@@ -87,7 +87,7 @@
       <link href="posts/4b3510a4.html"/>
       <url>posts/4b3510a4.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>JAVA学习笔记</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>JAVA学习笔记</p><h3 id="JVM-JRE-JDK"><a href="#JVM-JRE-JDK" class="headerlink" title="JVM,JRE,JDK"></a>JVM,JRE,JDK</h3><p>1.JVM（Java Virtual Machine ）：Java虚拟机，简称JVM，是运行所有Java程序的假想计算机，是Java程序的<br>运行环境，是Java 最具吸引力的特性之一。我们编写的Java代码，都运行在 JVM 之上。</p><p>2.JRE (Java Runtime Environment) ：是Java程序的运行时环境，包含 JVM 和运行时所需要的 核心类库。</p><p>3.JDK (Java Development Kit)：是Java程序开发工具包，包含 JRE 和开发人员使用的工具。</p><p>tip:<br>三者关系： JDK &gt; JRE &gt; JVM</p>]]></content>
       
       
       <categories>
