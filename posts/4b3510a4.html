@@ -3620,7 +3620,7 @@ lock<span class="token punctuation">.</span><span class="token function">unlock<
 <h4 id="Timed-Waiting-计时等待"><a href="#Timed-Waiting-计时等待" class="headerlink" title="Timed Waiting(计时等待)"></a>Timed Waiting(计时等待)</h4><p>Timed Waiting在API中的描述为：一个正在限时等待另一个线程执行一个（唤醒）动作的线程处于这一状态。单独<br>的去理解这句话，真是玄之又玄，其实我们在之前的操作中已经接触过这个状态了，在哪里呢？<br>在我们写卖票的案例中，为了减少线程执行太快，现象不明显等问题，我们在run方法中添加了sleep语句，这样就<br>强制当前正在执行的线程休眠（暂停执行），以“减慢线程”。<br>其实当我们调用了sleep方法之后，当前执行的线程就进入到“休眠状态”，其实就是所谓的Timed Waiting(计时等<br>待)。</p>
 <h4 id="BLOCKED（锁阻塞）"><a href="#BLOCKED（锁阻塞）" class="headerlink" title="BLOCKED（锁阻塞）"></a>BLOCKED（锁阻塞）</h4><p>Blocked状态在API中的介绍为：一个正在阻塞等待一个监视器锁（锁对象）的线程处于这一状态。<br>我们已经学完同步机制，那么这个状态是非常好理解的了。比如，线程A与线程B代码中使用同一锁，如果线程A获<br>取到锁，线程A进入到Runnable状态，那么线程B就进入到Blocked锁阻塞状态。</p>
 <h4 id="Waiting（无限等待）"><a href="#Waiting（无限等待）" class="headerlink" title="Waiting（无限等待）"></a>Waiting（无限等待）</h4><p>Wating状态在API中介绍为：一个正在无限期等待另一个线程执行一个特别的（唤醒）动作的线程处于这一状态。</p>
-<h3 id="等待唤醒机制"><a href="#等待唤醒机制" class="headerlink" title="等待唤醒机制"></a>等待唤醒机制</h3><h4 id="线程间的通信"><a href="#线程间的通信" class="headerlink" title="线程间的通信"></a>线程间的通信</h4><h2 id="1-1-线程间通信"><a href="#1-1-线程间通信" class="headerlink" title="1.1 线程间通信"></a>1.1 线程间通信</h2><p><strong>概念：</strong>多个线程在处理同一个资源，但是处理的动作（线程的任务）却不相同。 </p>
+<h3 id="等待唤醒机制"><a href="#等待唤醒机制" class="headerlink" title="等待唤醒机制"></a>等待唤醒机制</h3><h4 id="线程间的通信"><a href="#线程间的通信" class="headerlink" title="线程间的通信"></a>线程间的通信</h4><p><strong>概念：</strong>多个线程在处理同一个资源，但是处理的动作（线程的任务）却不相同。 </p>
 <p><strong>为什么要处理线程间通信：</strong></p>
 <p>多个线程并发执行时, 在默认情况下CPU是随机切换线程的，当我们需要多个线程来共同完成一件任务，并且我们希望他们有规律的执行, 那么多线程之间需要一些协调通信，以此来帮我们达到多线程共同操作一份数据。</p>
 <p><strong>如何保证线程间通信有效利用资源：</strong></p>
