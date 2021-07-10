@@ -6,7 +6,7 @@
   <link href="http://inactionzz.github.io/atom.xml" rel="self"/>
   
   <link href="http://inactionzz.github.io/"/>
-  <updated>2021-07-10T09:01:59.973Z</updated>
+  <updated>2021-07-10T09:56:34.151Z</updated>
   <id>http://inactionzz.github.io/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Basketball</title>
-    <link href="http://inactionzz.github.io/posts/98aeebc1.html"/>
-    <id>http://inactionzz.github.io/posts/98aeebc1.html</id>
+    <title>篮球公园</title>
+    <link href="http://inactionzz.github.io/posts/8639fcc9.html"/>
+    <id>http://inactionzz.github.io/posts/8639fcc9.html</id>
     <published>2021-07-10T09:01:59.000Z</published>
-    <updated>2021-07-10T09:01:59.973Z</updated>
+    <updated>2021-07-10T09:56:34.151Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe height="600" width="600" src="https://imgtu.com/i/WSom9O"><iframe height=600 width=600 src="E:\BLOG\hexoblog\source\_posts\Basketball\1625906826877.gif"></iframe>]]></content>
     
     
       
@@ -33,6 +33,10 @@
     
     
     
+    <category term="博客篇" scheme="http://inactionzz.github.io/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/"/>
+    
+    
+    <category term="博客" scheme="http://inactionzz.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
