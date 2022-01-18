@@ -668,14 +668,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-16
+                    2022-01-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.4k
+                    4.3k
                 </div>
                 
 
@@ -752,7 +752,7 @@
 <li>$t$ 为神经元的输出<br>可见，** 一个神经元的功能是求得输入向量与权向量的内积后，经一个非线性传递函数得到一个标量结果 **。       </li>
 </ol>
 <h3 id="单层神经网络"><a href="#单层神经网络" class="headerlink" title="单层神经网络"></a>单层神经网络</h3><p>是最基本的神经元网络形式，由有限个神经元构成，所有神经元的输入向量都是同一个向量。由于每一个神经元都会产生一个标量结果，所以单层神经元的输出是一个向量，向量的维数等于神经元的数目。</p>
-<h3 id="感知机"><a href="#感知机" class="headerlink" title="感知机"></a>感知机</h3><p>感知机由<strong>两层神经网</strong>络组成，<strong>输入层</strong>接收外界输入信号后传递给**输出层（输出正例或反例），输出层为M-P神经网络<br><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.1/感知机.png"></p>
+<h3 id="感知机"><a href="#感知机" class="headerlink" title="感知机"></a>感知机</h3><p>感知机由<strong>两层神经网</strong>络组成，<strong>输入层</strong>接收外界输入信号后传递给**输出层（输出正例或反例），输出层为M-P神经网络<br><img src="nlp/images/1.1/%E6%84%9F%E7%9F%A5%E6%9C%BA.png"></p>
 <p>其中从$w_0,w_1\cdots w_n​$都表示权重</p>
 <p><strong>感知机的作用：</strong></p>
 <p>把一个n维向量空间用一个超平面分割成两部分，给定一个输入向量，超平面可以判断出这个向量位于超平面的哪一边，得到输入时正类或者是反类，<strong>对应到2维空间就是一条直线把一个平面分为两个部分</strong>不可为曲线。</p>
@@ -760,17 +760,17 @@
 <ul>
 <li>输入层（Input layer），众多神经元（Neuron）接受大量输入消息。输入的消息称为输入向量。</li>
 <li>输出层（Output layer），消息在神经元链接中传输、分析、权衡，形成输出结果。输出的消息称为输出向量。</li>
-<li>隐藏层（Hidden layer），简称“隐层”，是输入层和输出层之间众多神经元和链接组成的各个层面。隐层可以有一层或多层。隐层的节点（神经元）数目不定，但数目越多神经网络的非线性越显著，从而神经网络的强健性（robustness）更显著。<br>示意图：<br><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.1/多层神经网络.png"></li>
+<li>隐藏层（Hidden layer），简称“隐层”，是输入层和输出层之间众多神经元和链接组成的各个层面。隐层可以有一层或多层。隐层的节点（神经元）数目不定，但数目越多神经网络的非线性越显著，从而神经网络的强健性（robustness）更显著。<br>示意图：<br><img src="nlp/images/1.1/%E5%A4%9A%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.png"></li>
 </ul>
 <p><strong>概念：全连接层</strong><br>简单的说即进行$$y=Wx+b$$变换</p>
 <p>全连接层：当前一层和前一层每个神经元相互链接，我们称当前这一层为全连接层。</p>
 <p><strong>重点</strong>：假设第N-1层有m个神经元，第N层有n个神经元，经过矩阵运算可以由m个神经元转换成n</p>
-<p><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.1/全连接层.png"></p>
+<p><img src="nlp/images/1.1/%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82.png"></p>
 <p>从上图可以看出，所谓的全连接层就是在前一层的输出的基础上进行一次$Y=Wx+b​$的变化(不考虑激活函数的情况下就是一次线性变化，所谓线性变化就是平移(+b)和缩放的组合(*w))</p>
-<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.1/激活函数4.png"></p>
+<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p><img src="nlp/images/1.1/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B04.png"></p>
 <p>如上图，右边是sigmoid函数，对感知机的结果，通过sigmoid函数进行处理</p>
 <p>如果给定合适的参数w和b，就可以得到合适的曲线，能够完成对最开始问题的非线性分割</p>
-<p>所以激活函数很重要的一个<strong>作用</strong>就是<strong>增加模型的非线性分割能力</strong>,便于拟合曲线<br>常用的激活函数有：<br><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.1/激活函数5.jpg"></p>
+<p>所以激活函数很重要的一个<strong>作用</strong>就是<strong>增加模型的非线性分割能力</strong>,便于拟合曲线<br>常用的激活函数有：<br><img src="nlp/images/1.1/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B05.jpg"></p>
 <p>可知：</p>
 <ul>
 <li>sigmoid 只会输出正数，以及靠近0的输出变化率最大</li>
@@ -783,7 +783,7 @@
 <li><strong>缓解梯度消失问题</strong></li>
 <li><strong>加速模型收敛等</strong></li>
 </ul>
-<p>例子：通过较低级输入，进行更高级特征的学习，最终得到输出。<br><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.1/神经网络例子4.png"></p>
+<p>例子：通过较低级输入，进行更高级特征的学习，最终得到输出。<br><img src="nlp/images/1.1/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%BE%8B%E5%AD%904.png"></p>
 <p>总结：深度学习的<strong>思想</strong>：输入最原始的最基本的数据，通过模型来进行特征工程，然后进行更加高级的特征工程的学习，通过输入的数据来确定合适的参数，让模型去更好的拟合数据。<br>这个过程可以理解为盲人摸象，多个人一起摸，把摸到的结果乘上合适的权重，进行合适的变化，让他和目标值趋近一致。整个过程只需要输入基础的数据，程序自动寻找合适的参数。</p>
 <h2 id="pytorch"><a href="#pytorch" class="headerlink" title="pytorch"></a>pytorch</h2><h3 id="1-张量tensor"><a href="#1-张量tensor" class="headerlink" title="1.张量tensor"></a>1.张量tensor</h3><p>张量是一个统称，其中包含很多类型：</p>
 <ol>
@@ -926,7 +926,7 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
 
 tensor中的数据类型非常多，常见类型如下：
 
-!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>E<span class="token punctuation">:</span><span class="token operator">/</span>BLOG<span class="token operator">/</span>hexoblog<span class="token operator">/</span>source<span class="token operator">/</span>_posts<span class="token operator">/</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>tensor的数据类型<span class="token punctuation">.</span>png<span class="token punctuation">)</span>
+!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>tensor的数据类型<span class="token punctuation">.</span>png<span class="token punctuation">)</span>
 
 上图中的Tensor types表示这种<span class="token builtin">type</span>的tensor是其实例
 
@@ -1043,13 +1043,13 @@ tensor<span class="token punctuation">(</span><span class="token punctuation">[<
 
 在上面的练习中，$J<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">(</span>a<span class="token operator">+</span>bc<span class="token punctuation">)</span><span class="token punctuation">,</span>令u<span class="token operator">=</span>a<span class="token operator">+</span>v<span class="token punctuation">,</span>v <span class="token operator">=</span> bc$<span class="token punctuation">,</span>把它绘制成计算图可以表示为：
 
-!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>E<span class="token punctuation">:</span><span class="token operator">/</span>BLOG<span class="token operator">/</span>hexoblog<span class="token operator">/</span>source<span class="token operator">/</span>_posts<span class="token operator">/</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>计算图<span class="token punctuation">.</span>png<span class="token punctuation">)</span>
+!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>计算图<span class="token punctuation">.</span>png<span class="token punctuation">)</span>
 
 绘制成为计算图之后，可以清楚的看到向前计算的过程
 
 之后，对每个节点求偏导可有：
 
-!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>E<span class="token punctuation">:</span><span class="token operator">/</span>BLOG<span class="token operator">/</span>hexoblog<span class="token operator">/</span>source<span class="token operator">/</span>_posts<span class="token operator">/</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>计算梯度<span class="token punctuation">.</span>png<span class="token punctuation">)</span>
+!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>计算梯度<span class="token punctuation">.</span>png<span class="token punctuation">)</span>
 
 那么反向传播的过程就是一个上图的从右往左的过程，自变量$a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c$各自的偏导就是连线上的梯度的乘积：
 $$
@@ -1063,7 +1063,7 @@ $$
 <span class="token comment">### 神经网络中的反向传播</span>
 反向传播的思想就是对其中的某一个参数单独求梯度，之后更新，如下图所示：
 
-!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>E<span class="token punctuation">:</span><span class="token operator">/</span>BLOG<span class="token operator">/</span>hexoblog<span class="token operator">/</span>source<span class="token operator">/</span>_posts<span class="token operator">/</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>偏导的计算<span class="token number">2.</span>png<span class="token punctuation">)</span>
+!<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>nlp<span class="token operator">/</span>images<span class="token operator">/</span><span class="token number">1.2</span><span class="token operator">/</span>偏导的计算<span class="token number">2.</span>png<span class="token punctuation">)</span>
 
 <span class="token comment">## Pytorch完成线性回归</span>
 <span class="token comment">### 1.向前计算</span>
@@ -1214,7 +1214,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 
 
 <p>图形效果如下：</p>
-<p><img src="E:/BLOG/hexoblog/source/_posts/nlp/images/1.2/线性回归1.png"></p>
+<p><img src="nlp/images/1.2/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%921.png"></p>
 <p>打印w和b，可有</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">w tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2.9280</span><span class="token punctuation">]</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 b tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.8372</span><span class="token punctuation">]</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
