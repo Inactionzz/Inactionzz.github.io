@@ -2272,7 +2272,7 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <ul>
 <li><strong>Collection</strong>：单列集合类的根接口，用于存储一系列符合某种规则的元素，它有两个重要的子接口，分别是<code>java.util.List</code>和<code>java.util.Set</code>。其中，<code>List</code>的特点是元素有序、元素可重复。<code>Set</code>的特点是元素无序，而且不可重复。<code>List</code>接口的主要实现类有<code>java.util.ArrayList</code>和<code>java.util.LinkedList</code>，<code>Set</code>接口的主要实现类有<code>java.util.HashSet</code>和<code>java.util.TreeSet</code>。     </li>
 </ul>
-<p>大致结构如图：<br><img src="/posts/4b3510a4/01_%E9%9B%86%E5%90%88.bmp"></p>
+<p>大致结构如图：<br><img src="/posts/01_%E9%9B%86%E5%90%88.bmp"></p>
 <h4 id="1-3-Collection-常用功能"><a href="#1-3-Collection-常用功能" class="headerlink" title="1.3 Collection 常用功能"></a>1.3 Collection 常用功能</h4><p>Collection是所有单列集合的父接口，因此在Collection中定义了单列集合(List和Set)通用的一些方法，这些方法可用于操作所有的单列集合。方法如下：</p>
 <ul>
 <li><code>public boolean add(E e)</code>：  把给定的对象添加到当前集合中 。</li>
@@ -2370,7 +2370,7 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 </blockquote>
 <h4 id="迭代器的实现原理"><a href="#迭代器的实现原理" class="headerlink" title="迭代器的实现原理"></a>迭代器的实现原理</h4><p>。当遍历集合时，首先通过调用t集合的iterator()方法获得迭代器对象，然后使用hashNext()方法判断集合中是否存在下一个元素，如果存在，则调用next()方法将元素取出，否则说明已到达了集合末尾，停止遍历元素。</p>
 <p>Iterator迭代器对象<br>图例来演示Iterator对象迭代元素的过程：</p>
-<p><img src="/posts/4b3510a4/JAVA%5C02_%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.bmp"></p>
+<p><img src="/posts/JAVA%5C02_%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.bmp"></p>
 <p>在调用Iterator的next方法之前，迭代器的索引位于第一个元素之前，不指向任何元素，当第一次调用迭代器的next方法后，迭代器的索引会向后移动一位，指向第一个元素并将该元素返回，当再次调用next方法时，迭代器的索引会指向第二个元素并将该元素返回，依此类推，直到hasNext方法返回false，表示到达了集合的末尾，终止对元素的遍历。</p>
 <h4 id="增强for"><a href="#增强for" class="headerlink" title="增强for"></a>增强for</h4><p>增强for循环(也称for each循环)是<strong>JDK1.5</strong>以后出来的一个高级for循环，专门用来遍历数组和集合的。它的内部原理其实是个Iterator迭代器，所以在遍历的过程中，不能对集合中的元素进行增删操作。</p>
 <p>格式：</p>
@@ -2608,8 +2608,8 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <span class="token comment">//？代表可以接收任意类型</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>tips:泛型不存在继承关系 Collection<object> list = new ArrayList<string>();这种是错误的。</string></object></p>
-</blockquote>
+<p>tips:泛型不存在继承关系 Collection<object> list = new ArrayList<string>();这种是错误的。<p></p>
+
 <h5 id="通配符高级使用—-受限泛型"><a href="#通配符高级使用—-受限泛型" class="headerlink" title="通配符高级使用—-受限泛型"></a>通配符高级使用—-受限泛型</h5><p>之前设置泛型的时候，实际上是可以任意设置的，只要是类就可以设置。但是在JAVA的泛型中可以指定一个泛型的<strong>上限</strong>和<strong>下限</strong>。</p>
 <p><strong>泛型的上限</strong>：</p>
 <ul>
@@ -2669,7 +2669,7 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <blockquote>
 <p>LinkedList是一个双向链表，双向链表的结构如图：</p>
 </blockquote>
-<p><img src="/posts/4b3510a4/Java%5Cimg%5C%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png"><br>实际开发中对一个集合元素的添加与删除经常涉及到首尾操作，而LinkedList提供了大量首尾操作的方法。这些方法我们作为了解即可：</p>
+<p><img src="/posts/Java%5Cimg%5C%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png"><br>实际开发中对一个集合元素的添加与删除经常涉及到首尾操作，而LinkedList提供了大量首尾操作的方法。这些方法我们作为了解即可：</p>
 <ul>
 <li><code>public void addFirst(E e)</code>:将指定元素插入此列表的开头。</li>
 <li><code>public void addLast(E e)</code>:将指定元素添加到此列表的结尾。</li>
@@ -2725,9 +2725,9 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <li>如果一个节点是红色的，则它的子节点必须是黑色的。</li>
 <li>从一个节点到该节点的子孙节点的所有路径上包含相同数目的黑节点。</li>
 </ul>
-<p>简单的来说，哈希表是由数组+链表+红黑树（JDK1.8增加了红黑树部分）实现的，如下图所示。<img src="/posts/4b3510a4/java%5Cimg%5C%E5%93%88%E5%B8%8C%E8%A1%A8.png"></p>
+<p>简单的来说，哈希表是由数组+链表+红黑树（JDK1.8增加了红黑树部分）实现的，如下图所示。<img src="/posts/java%5Cimg%5C%E5%93%88%E5%B8%8C%E8%A1%A8.png"></p>
 <p>存储流程图：</p>
-<p><img src="/posts/4b3510a4/java%5Cimg%5C%E5%93%88%E5%B8%8C%E6%B5%81%E7%A8%8B%E5%9B%BE.png"></p>
+<p><img src="/posts/java%5Cimg%5C%E5%93%88%E5%B8%8C%E6%B5%81%E7%A8%8B%E5%9B%BE.png"></p>
 <p>总而言之，<strong>JDK1.8</strong>引入红黑树大程度优化了HashMap的性能，那么对于我们来讲保证HashSet集合元素的唯一，其实就是根据对象的hashCode和equals方法来决定的。如果我们往集合中存放自定义的对象，那么保证其唯一，就必须复写hashCode和equals方法建立属于当前对象的比较方式。</p>
 <h4 id="HashSet存储自定义类型元素"><a href="#HashSet存储自定义类型元素" class="headerlink" title="HashSet存储自定义类型元素"></a>HashSet存储自定义类型元素</h4><p>给HashSet中存放自定义类型元素时，需要重写对象中的hashCode和equals方法，建立自己的比较方式，才能保证HashSet集合中的对象唯一</p>
 <p>创建自定义Student类</p>
@@ -2910,7 +2910,7 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <p><strong>Comparator</strong>强行对某个对象进行整体排序。可以将Comparator 传递给sort方法（如Collections.sort或 Arrays.sort），从而允许在排序顺序上实现精确控制。还可以使用Comparator来控制某些数据结构（如有序set或有序映射）的顺序，或者为那些没有自然顺序的对象collection提供排序。</p>
 <h3 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h3><h4 id="概述-12"><a href="#概述-12" class="headerlink" title="概述"></a>概述</h4><p>现实生活中，我们常会看到这样的一种集合：IP地址与主机名，身份证号与个人，系统用户名与系统用户对象等，这种一一对应的关系，就叫做映射。Java提供了专门的集合类用来存放这种对象关系的对象，即<code>java.util.Map</code>接口。</p>
 <p>我们通过查看<code>Map</code>接口描述，发现<code>Map</code>接口下的集合与<code>Collection</code>接口下的集合，它们存储数据的形式不同，如下图。</p>
-<p><img src="/posts/4b3510a4/img1%5CCollection%E4%B8%8EMap.bmp"></p>
+<p><img src="/posts/img1%5CCollection%E4%B8%8EMap.bmp"></p>
 <ul>
 <li><code>Collection</code>中的集合，元素是孤立存在的（理解为单身），向集合中存储元素采用一个个元素的方式存储。</li>
 <li><code>Map</code>中的集合，元素是成对存在的(理解为夫妻)。每个元素由键与值两部分组成，通过键可以找对所对应的值。</li>
@@ -3043,7 +3043,7 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <p>异常指的并不是语法错误,语法错了,编译不通过,不会产生字节码文件,根本不能运行.</p>
 </blockquote>
 <h4 id="异常体系"><a href="#异常体系" class="headerlink" title="异常体系"></a>异常体系</h4><p>异常机制其实是帮助我们<strong>找到</strong>程序中的问题，异常的根类是<code>java.lang.Throwable</code>，其下有两个子类：<code>java.lang.Error</code>与<code>java.lang.Exception</code>，平常所说的异常指<code>java.lang.Exception</code>。</p>
-<p><img src="/posts/4b3510a4/java%5Cimg%5C%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB.png"></p>
+<p><img src="/posts/java%5Cimg%5C%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB.png"></p>
 <p><strong>Throwable体系：</strong></p>
 <ul>
 <li><strong>Error</strong>:严重错误Error，无法通过处理的错误，只能事先避免，好比绝症。</li>
@@ -3061,14 +3061,14 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 </li>
 </ul>
 <p><strong><em>出现异常,把异常的简单类名,拷贝到API中去查。</em></strong></p>
-<p><img src="/posts/4b3510a4/java%5Cimg%5C%E7%AE%80%E5%8D%95%E7%9A%84%E5%BC%82%E5%B8%B8%E6%9F%A5%E7%9C%8B.bmp"></p>
+<p><img src="/posts/java%5Cimg%5C%E7%AE%80%E5%8D%95%E7%9A%84%E5%BC%82%E5%B8%B8%E6%9F%A5%E7%9C%8B.bmp"></p>
 <h4 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h4><p>我们平常说的异常就是指Exception，因为这类异常一旦出现，我们就要对代码进行更正，修复程序。</p>
 <p><strong>异常(Exception)的分类</strong>:根据在编译时期还是运行时期去检查异常?</p>
 <ul>
 <li><strong>编译时期异常</strong>:checked异常。在编译时期,就会检查,如果没有处理异常,则编译失败。(如日期格式化异常)</li>
 <li><strong>运行时期异常</strong>:runtime异常。在运行时期,检查异常.在编译时期,运行异常不会编译器检测(不报错)。(如数学异常)</li>
 </ul>
-<p>​    <img src="/posts/4b3510a4/java%5Cimg%5C%E5%BC%82%E5%B8%B8%E7%9A%84%E5%88%86%E7%B1%BB.png"></p>
+<p>​    <img src="/posts/java%5Cimg%5C%E5%BC%82%E5%B8%B8%E7%9A%84%E5%88%86%E7%B1%BB.png"></p>
 <h4 id="异常的产生过程解析"><a href="#异常的产生过程解析" class="headerlink" title="异常的产生过程解析"></a>异常的产生过程解析</h4><p>先运行下面的程序，程序会产生一个数组索引越界异常ArrayIndexOfBoundsException。我们通过图解来解析下异常产生的过程。</p>
 <p> 工具类</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayTools</span> <span class="token punctuation">{</span>
@@ -3090,7 +3090,7 @@ srcList<span class="token punctuation">.</span><span class="token function">add<
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>上述程序执行过程图解：</p>
-<p> <img src="/posts/4b3510a4/java%5Cimg%5C%E5%BC%82%E5%B8%B8%E4%BA%A7%E7%94%9F%E8%BF%87%E7%A8%8B.png"></p>
+<p> <img src="/posts/java%5Cimg%5C%E5%BC%82%E5%B8%B8%E4%BA%A7%E7%94%9F%E8%BF%87%E7%A8%8B.png"></p>
 <h3 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h3><p> ava异常处理的五个关键字：<strong>try、catch、finally、throw、throws</strong></p>
 <h4 id="抛出异常throw"><a href="#抛出异常throw" class="headerlink" title="抛出异常throw"></a>抛出异常throw</h4><p>在编写程序时，我们必须要考虑程序出现问题的情况。比如，在定义方法时，方法需要接受参数。那么，当调用方法使用接受到的参数时，首先需要先对参数数据进行合法的判断，数据若不合法，就应该告诉调用者，传递合法的数据进来。这时需要使用抛出异常的方式来告诉调用者。</p>
 <p>在java中，提供了一个<strong>throw</strong>关键字，它用来抛出一个指定的异常对象。那么，抛出一个异常具体如何操作呢？</p>
@@ -4316,7 +4316,7 @@ d<span class="token operator">:</span>\aaa 目录<span class="token operator">?<
 
 
 
-
+</string></object></p></blockquote>
                 
             </div>
             <hr/>
